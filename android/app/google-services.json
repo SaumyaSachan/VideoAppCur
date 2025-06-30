@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "364343666456",
+    "project_id": "videoreadydemo-f26b7",
+    "storage_bucket": "videoreadydemo-f26b7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364343666456:android:7c202c8567a5f2f2c9206d",
+        "android_client_info": {
+          "package_name": "com.videoapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOQrc5hPGSqMPVEQ0y2MYjaZW_WxRLSaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+} 
