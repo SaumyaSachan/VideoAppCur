@@ -27,10 +27,11 @@ export default HomeHeader;
 const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
-    padding: 12,
+    padding: 42,
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: '#0a1a2a',
+ 
   },
   logo: {
     width: 40,

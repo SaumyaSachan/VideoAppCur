@@ -84,12 +84,10 @@ const Genre = ({ navigation }) => {
         </View>
       </ScrollView>
       <View style={styles.bottomButtons}>
-        <Location />
         <TouchableOpacity
           style={[
             styles.confirmButton,
             selectedGenres.length < 3 && styles.confirmButtonDisabled,
-            { marginTop: 0 }
           ]}
           onPress={handleConfirm}
           disabled={selectedGenres.length < 3}
@@ -101,6 +99,7 @@ const Genre = ({ navigation }) => {
             Confirm ({selectedGenres.length}/3)
           </Text>
         </TouchableOpacity>
+        {/* <Location /> */}
       </View>
     </View>
   );
@@ -110,6 +109,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#041524',
+    padding:40,
   },
   header: {
     flexDirection: 'row',
@@ -198,6 +198,8 @@ const styles = StyleSheet.create({
     bottom: 0,
     padding: 16,
     backgroundColor: '#041524',
+    flexDirection: 'column',
+    gap: 10,
   },
 });
 

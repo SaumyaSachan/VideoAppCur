@@ -87,6 +87,15 @@ const HomeDrawer = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
+
+        <View style={styles.headerButton}>
+                <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+                  <FontAwesome name="arrow-left" size={20} color="#fff" />
+                </TouchableOpacity>
+                <Text style={styles.headerTitle}>Home Drawer</Text>
+                <View style={styles.headerRight} />
+              </View>
+        
         {/* Header with Profile Info */}
         <View style={styles.header}>
           <Image
@@ -200,9 +209,28 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    padding: 20,
+    // padding: 20,
+  paddingHorizontal: 20,
+  paddingTop: 60,
+  paddingBottom: 20,
+  borderBottomWidth: 1,
+  borderBottomColor: '#1a2a3a',
+  },
+  headerButton: {
+    flexDirection: 'row',
+    justifyContent:'space-between',
+    alignItems: 'center',
+    padding: 50,
     borderBottomWidth: 1,
     borderBottomColor: '#1a2a3a',
+  },
+  headerTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#fff',
+  },
+  headerRight: {
+    width: 40,
   },
   profileImage: {
     width: 60,

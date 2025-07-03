@@ -61,16 +61,16 @@ const AppNavigation = () => {
         user ? (
                    <Stack.Navigator initialRouteName="SplashScreen">
     <Stack.Screen name='SplashScreen'component={SplashScreen} options={{headerShown:false}}/>
-    <Stack.Screen name='FirstScreen'component={FirstScreen} />
-    <Stack.Screen name='HomePage'component={HomePage} />
-    <Stack.Screen name='Genre'component={Genre} />
+    <Stack.Screen name='FirstScreen'component={FirstScreen}  options={{headerShown:false}}/>
+    <Stack.Screen name='HomePage'component={HomePage}  options={{headerShown:false}}/>
+    <Stack.Screen name='Genre'component={Genre}  options={{headerShown:false}}/>
     <Stack.Screen name='Camera'component={Camera} />
     <Stack.Screen name='PlayVideo' component={PlayVideo} />
-    <Stack.Screen name='Notification' component={Notification} />
-    <Stack.Screen name='Search' component={Search} />
-    <Stack.Screen name='VideoDetailScreen' component={VideoDetailScreen} />
-    <Stack.Screen name='DownloadedVideo' component={DownloadedVideo} />
-    <Stack.Screen name='HomeDrawer' component={HomeDrawer} />
+    <Stack.Screen name='Notification' component={Notification} options={{headerShown:false}} />
+    <Stack.Screen name='Search' component={Search} options={{headerShown:false}} />
+    <Stack.Screen name='VideoDetailScreen' component={VideoDetailScreen} options={{headerShown:false}} />
+    <Stack.Screen name='DownloadedVideo' component={DownloadedVideo}  options={{headerShown:false}}/>
+    <Stack.Screen name='HomeDrawer' component={HomeDrawer}  options={{headerShown:false}}/>
     <Stack.Screen name='EditProfile' component={require('../screens/EditProfile').default} />
     <Stack.Screen name='LogOut'component={LogOut} />
    </Stack.Navigator>
@@ -82,17 +82,17 @@ const AppNavigation = () => {
        <Stack.Navigator >
 
     <Stack.Screen name='SplashScreen'component={SplashScreen} options={{headerShown:false}}/>
-    <Stack.Screen name='FirstScreen'component={FirstScreen} />
-    <Stack.Screen name='BottomTab'component={BottomTab} />
-    <Stack.Screen name='Genre'component={Genre} />
-    <Stack.Screen name='HomePage'component={HomePage} />
+    <Stack.Screen name='FirstScreen'component={FirstScreen} options={{headerShown:false}}/>
+    <Stack.Screen name='BottomTab'component={BottomTab} options={{headerShown:false}} />
+    <Stack.Screen name='Genre'component={Genre}  options={{headerShown:false}}/>
+    <Stack.Screen name='HomePage'component={HomePage} options={{headerShown:false}} />
     <Stack.Screen name='Camera'component={Camera} />
     <Stack.Screen name='PlayVideo'component={PlayVideo} />
-    <Stack.Screen name='Search' component={Search} />
-    <Stack.Screen name='Notification' component={Notification} />
-    <Stack.Screen name='VideoDetailScreen' component={VideoDetailScreen} />
-    <Stack.Screen name='DownloadedVideo' component={DownloadedVideo} />
-    <Stack.Screen name='HomeDrawer' component={HomeDrawer} />
+    <Stack.Screen name='Search' component={Search} options={{headerShown:false}}/>
+    <Stack.Screen name='Notification' component={Notification} options={{headerShown:false}} />
+    <Stack.Screen name='VideoDetailScreen' component={VideoDetailScreen}  options={{headerShown:false}} />
+    <Stack.Screen name='DownloadedVideo' component={DownloadedVideo}  options={{headerShown:false}}/>
+    <Stack.Screen name='HomeDrawer' component={HomeDrawer} options={{headerShown:false}}/>
     <Stack.Screen name='EditProfile' component={require('../screens/EditProfile').default} />
     <Stack.Screen name='LogOut'component={LogOut} />
 

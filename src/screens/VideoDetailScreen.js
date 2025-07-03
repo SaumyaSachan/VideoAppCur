@@ -7,7 +7,7 @@ import CastCardList from '../components/CastCardList';
 import { useAppDispatch } from '../redux/hooks';
 import { addDownloadedVideo } from '../redux/slice/videoDownloadSlice';
 
-const VideoDetailScreen = ({ route }) => {
+const VideoDetailScreen = ({navigation, route }) => {
   const { title = "Squid Game", videoUrl = "https://www.w3schools.com/html/mov_bbb.mp4" } = route.params || {};
   const [modalVisible, setModalVisible] = useState(false);
   const dispatch = useAppDispatch();
@@ -51,7 +51,20 @@ const VideoDetailScreen = ({ route }) => {
   console.log('Download modal visible:', modalVisible);
 
   return (
-    <View style={styles.container}>
+      <View style={styles.container}>
+
+      <View style={styles.header}>
+      <TouchableOpacity 
+        style={styles.backButton}
+        onPress={() => navigation.goBack()}
+      >
+      <FontAwesome name="arrow-left" size={20} color="#fff" />
+      </TouchableOpacity>
+      <Text style={styles.headerTitle}>Video Detail Screen</Text>
+      <View style={styles.placeholder} />
+      </View>
+
+
       <ScrollView>
         <PlayVideo videoUrl={videoUrl} />
         <View style={styles.titleRow}>
@@ -116,4 +129,27 @@ const styles = StyleSheet.create({
   actionBtn: { flexDirection: 'row', alignItems: 'center', gap: 5 },
   actionText: { color: 'white', marginLeft: 5 },
   sectionTitle: { color: '#fff', fontSize: 18, fontWeight: 'bold', marginLeft: 15, marginTop: 20 },
+
+header: {
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  paddingHorizontal: 20,
+  paddingTop: 60,
+  paddingBottom: 20,
+  backgroundColor: '#0a1a2a',
+},
+backButton: {
+  padding: 10,
+},
+headerTitle: {
+  fontSize: 20,
+  fontWeight: 'bold',
+  color: '#fff',
+},
+placeholder: {
+  width: 40, // Same as back button width to balance spacing
+},
+
+
 }); 
